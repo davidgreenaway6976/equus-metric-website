@@ -8,7 +8,7 @@
 <link rel="icon" href="assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,12 +31,12 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <div>
+      <div class="hero-copy">
         <div class="eyebrow-chip">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Built with equine veterinarians &amp; nutritionists
         </div>
-        <h1>Know exactly how your horse is doing -- not just how they look.</h1>
+        <h1>Stop guessing. <em>Measure</em> your horse instead.</h1>
         <p class="lede">
           A tape measure and a photo, turned into a real weight estimate and body condition
           score. From there, Equus Metric builds a ration and a conditioning plan around
@@ -52,53 +52,95 @@
         <p class="hero-note">Coming soon to the App Store and Google Play.</p>
       </div>
 
-      <div class="phone-stage">
-        <div class="mock-stack">
-          <div class="mock-card" style="max-width: 260px;">
-            <div class="mock-row">
-              <div>
-                <p class="mock-title">Weight</p>
-                <p class="mock-sub">505 kg &middot; +25 kg over 90 days</p>
-              </div>
-            </div>
-            <svg viewBox="0 0 220 60" width="100%" height="60" style="margin-top:12px;">
-              <polyline points="0,48 55,38 110,30 165,18 220,8" fill="none" stroke="#2F4A3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="220" cy="8" r="4.5" fill="#2F4A3B"/>
-            </svg>
-          </div>
-        </div>
-        <div class="mock-card mock-front">
-          <div class="mock-tint">
-            <div class="mock-row">
-              <div>
-                <p class="mock-title">Care Overview</p>
-                <p class="mock-sub">Bramble's farrier trim/shoe<br>is due in 4 days</p>
-              </div>
-              <div class="mock-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="#fff" stroke-width="2"/><path d="M3 9h18M8 3v4M16 3v4" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-              </div>
-            </div>
-          </div>
-          <div style="margin-top:16px; display:flex; justify-content:space-between; align-items:center;">
-            <span class="mock-badge">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              BCS 5.5/9 &middot; On track
-            </span>
-          </div>
-        </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+          <!-- far-side legs, drawn first so the body silhouette overlaps them -->
+          <path d="M215,268 C223,268 229,274 229,282 L229,432 C229,440 223,446 215,446 C207,446 201,440 201,432 L201,282 C201,274 207,268 215,268 Z" fill="#1D2B21"/>
+          <path d="M457,262 C465,262 471,268 471,276 L471,432 C471,440 465,446 457,446 C449,446 443,440 443,432 L443,276 C443,268 449,262 457,262 Z" fill="#1D2B21"/>
+
+          <!-- tail -->
+          <path d="M412,168 C450,180 478,215 486,255 C492,283 486,312 470,335 C480,300 478,268 462,240 C448,215 428,196 405,182 Z" fill="#233427"/>
+
+          <!-- main body + neck + head silhouette -->
+          <path d="M48,172
+                   C58,148 70,128 100,97
+                   C115,101 138,102 148,101
+                   C185,112 222,132 253,152
+                   C298,146 348,149 398,161
+                   C424,173 440,205 444,240
+                   L444,252 C444,300 440,340 432,436
+                   L458,436 C462,340 456,300 450,255
+                   C448,235 438,222 424,214
+                   C398,272 372,292 340,296
+                   C296,301 240,296 202,262
+                   C193,282 189,320 187,340
+                   C182,372 178,404 176,436
+                   L150,436 C154,400 158,364 165,330
+                   C170,300 176,272 185,252
+                   C168,236 158,214 155,192
+                   C138,196 118,196 100,190
+                   C82,182 62,178 48,172 Z"
+                fill="#F2ECDC" fill-opacity="0.98"/>
+
+          <!-- ear -->
+          <path d="M98,97 L108,58 L124,93 Z" fill="#F2ECDC"/>
+
+          <!-- mane strokes -->
+          <path d="M150,101 C168,112 182,124 196,140" stroke="#16211A" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.5"/>
+          <path d="M168,108 C186,120 200,133 213,150" stroke="#16211A" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.4"/>
+          <path d="M188,116 C204,129 217,142 229,158" stroke="#16211A" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.3"/>
+
+          <!-- eye -->
+          <circle cx="88" cy="140" r="4.5" fill="#16211A"/>
+
+          <!-- near-side legs (front of the pair, drawn over the belly line) -->
+          <path d="M178,258 C188,258 196,266 196,276 L196,432 C196,441 188,449 178,449 C168,449 160,441 160,432 L160,276 C160,266 168,258 178,258 Z" fill="#F2ECDC"/>
+          <path d="M424,250 C434,250 442,258 442,268 L442,432 C442,441 434,449 424,449 C414,449 406,441 406,432 L406,268 C406,258 414,250 424,250 Z" fill="#F2ECDC"/>
+
+          <!-- ground shadow -->
+          <ellipse cx="320" cy="452" rx="230" ry="10" fill="#0f1712" opacity="0.35"/>
+
+          <!-- measurement overlay: girth band (heart-girth tape) -->
+          <ellipse cx="300" cy="230" rx="58" ry="118" fill="none" stroke="#D9A868" stroke-width="2.5" stroke-dasharray="2 7" stroke-linecap="round" opacity="0.9"/>
+
+          <!-- measurement overlay: height at withers -->
+          <line x1="253" y1="152" x2="253" y2="446" stroke="#D9A868" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round" opacity="0.8"/>
+          <line x1="240" y1="152" x2="266" y2="152" stroke="#D9A868" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="240" y1="446" x2="266" y2="446" stroke="#D9A868" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="marquee">
+      <div class="marquee-track">
+        <span><b>01</b>Eventing</span>
+        <span><b>02</b>Dressage</span>
+        <span><b>03</b>Show Jumping</span>
+        <span><b>04</b>Hacking</span>
+        <span><b>05</b>Endurance</span>
+        <span><b>06</b>Western</span>
+        <span><b>01</b>Eventing</span>
+        <span><b>02</b>Dressage</span>
+        <span><b>03</b>Show Jumping</span>
+        <span><b>04</b>Hacking</span>
+        <span><b>05</b>Endurance</span>
+        <span><b>06</b>Western</span>
       </div>
     </div>
   </section>
 
   <section id="personas">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <span class="kicker">Two ways to own a horse</span>
         <h2>Built around who you actually are, not one generic profile.</h2>
         <p>Pick how you describe yourself when you sign up, and Home changes to match.</p>
       </div>
-      <div class="persona-grid">
+      <div class="persona-grid" data-reveal>
         <div class="persona-card">
+          <div class="persona-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21v-2a4 4 0 014-4h8a4 4 0 014 4v2" stroke="#2F4A3B" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#2F4A3B" stroke-width="2"/></svg>
+          </div>
           <p class="persona-kicker">Leisure Owner</p>
           <h3>I care for my horse and want to keep them healthy.</h3>
           <p class="persona-sub">Home leads with the day-to-day: what's due, what's on track.</p>
@@ -117,7 +159,10 @@
             </div>
           </div>
         </div>
-        <div class="persona-card">
+        <div class="persona-card competitive">
+          <div class="persona-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 3L4 14h6l-1 7 9-11h-6l1-7z" stroke="#D9A868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
           <p class="persona-kicker">Competitive Rider / Trainer</p>
           <h3>I train and compete for performance.</h3>
           <p class="persona-sub">Home leads with the countdown and the plan.</p>
@@ -142,52 +187,95 @@
 
   <section id="features">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <span class="kicker">Measurement &middot; Nutrition &middot; Conditioning</span>
         <h2>Four things, done properly.</h2>
         <p>Not a general-purpose horse app -- four specific problems, solved with real math and real vet-reviewed guidance.</p>
       </div>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M4 12a2 2 0 100 4M4 12a2 2 0 010-4M20 12a2 2 0 100 4M20 12a2 2 0 010-4" stroke="#2F4A3B" stroke-width="2" stroke-linecap="round"/></svg>
+      <div class="feature-grid" data-reveal>
+
+        <div class="feature-card wide">
+          <div class="feature-art">
+            <svg viewBox="0 0 132 132" width="100%" height="100%">
+              <rect width="132" height="132" rx="20" fill="#E7ECE7"/>
+              <path d="M40,100 C36,84 38,66 46,52 C52,70 58,80 66,84 C74,80 80,70 86,52 C94,66 96,84 92,100 C86,110 76,116 66,116 C56,116 46,110 40,100 Z" fill="#2F4A3B"/>
+              <circle cx="55" cy="66" r="2.6" fill="#F3E7D8"/>
+              <circle cx="66" cy="60" r="2.6" fill="#F3E7D8"/>
+              <circle cx="77" cy="66" r="2.6" fill="#F3E7D8"/>
+              <circle cx="66" cy="98" r="2.6" fill="#F3E7D8"/>
+              <ellipse cx="66" cy="80" rx="30" ry="46" fill="none" stroke="#B08251" stroke-width="2" stroke-dasharray="1.5 5"/>
+            </svg>
           </div>
-          <h3>Weight &amp; Body Condition</h3>
-          <p>A girth-and-length weight estimate and a full Henneke 1-9 body condition score, region by region -- with photo history alongside every entry.</p>
+          <div class="feature-copy">
+            <h3>Weight &amp; Body Condition</h3>
+            <p>A girth-and-length weight estimate and a full Henneke 1-9 body condition score, region by region -- with photo history alongside every entry.</p>
+          </div>
         </div>
+
         <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 3-6 6-6 10a6 6 0 0012 0c0-4-2-7-6-10z" stroke="#2F4A3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="feature-art">
+            <svg viewBox="0 0 132 132" width="100%" height="100%">
+              <rect width="132" height="132" rx="20" fill="#F3E7D8"/>
+              <path d="M40,92 L40,58 C40,50 46,44 54,44 L78,44 C86,44 92,50 92,58 L92,92 Z" fill="#B08251"/>
+              <path d="M40,92 L92,92 L88,102 L44,102 Z" fill="#8A6339"/>
+              <path d="M52,44 C50,34 54,26 62,22" stroke="#5B655D" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M64,44 C63,32 68,24 76,20" stroke="#5B655D" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M76,46 C77,36 82,29 89,26" stroke="#5B655D" stroke-width="3" stroke-linecap="round" fill="none"/>
+            </svg>
           </div>
           <h3>Nutrition &amp; Ration Calculator</h3>
-          <p>General forage, water, and feeding guidance is free for every horse -- a personalized daily forage and hard feed split, in kilograms, is the Premium step up.</p>
+          <p>General guidance is free for every horse -- a personalized daily forage and hard feed split, in kilograms, is the Premium step up.</p>
         </div>
+
         <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="#2F4A3B" stroke-width="2"/><path d="M4 9.5h16M8 3v4M16 3v4" stroke="#2F4A3B" stroke-width="2" stroke-linecap="round"/></svg>
+          <div class="feature-art">
+            <svg viewBox="0 0 132 132" width="100%" height="100%">
+              <rect width="132" height="132" rx="20" fill="#E7ECE7"/>
+              <rect x="34" y="38" width="64" height="58" rx="8" fill="#FFFFFF" stroke="#2F4A3B" stroke-width="2.5"/>
+              <path d="M34,54 L98,54" stroke="#2F4A3B" stroke-width="2.5"/>
+              <path d="M48,32 L48,42 M84,32 L84,42" stroke="#2F4A3B" stroke-width="3" stroke-linecap="round"/>
+              <rect x="44" y="62" width="10" height="10" rx="2" fill="#E4EEE6"/>
+              <rect x="61" y="62" width="10" height="10" rx="2" fill="#E4EEE6"/>
+              <rect x="78" y="62" width="10" height="10" rx="2" fill="#B08251"/>
+              <rect x="44" y="78" width="10" height="10" rx="2" fill="#E4EEE6"/>
+              <rect x="61" y="78" width="10" height="10" rx="2" fill="#E4EEE6"/>
+            </svg>
           </div>
           <h3>Care Calendar</h3>
           <p>Farrier, vaccinations, dental, and the rest, with sensible default frequencies and a real due date -- visible for every horse, free.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M13 3L4 14h6l-1 7 9-11h-6l1-7z" stroke="#2F4A3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+        <div class="feature-card wide">
+          <div class="feature-art">
+            <svg viewBox="0 0 132 132" width="100%" height="100%">
+              <rect width="132" height="132" rx="20" fill="#F3E7D8"/>
+              <line x1="24" y1="100" x2="108" y2="100" stroke="#8A6339" stroke-width="4" stroke-linecap="round"/>
+              <line x1="40" y1="60" x2="40" y2="100" stroke="#8A6339" stroke-width="4" stroke-linecap="round"/>
+              <line x1="92" y1="60" x2="92" y2="100" stroke="#8A6339" stroke-width="4" stroke-linecap="round"/>
+              <line x1="30" y1="66" x2="50" y2="66" stroke="#B08251" stroke-width="5" stroke-linecap="round"/>
+              <line x1="82" y1="66" x2="102" y2="66" stroke="#B08251" stroke-width="5" stroke-linecap="round"/>
+              <path d="M66,44 L92,58 L66,72 L40,58 Z" fill="#2F4A3B"/>
+              <circle cx="66" cy="58" r="4" fill="#F3E7D8"/>
+            </svg>
           </div>
-          <h3>Conditioning &amp; Competition Prep</h3>
-          <p>Foundation through taper, matched to your discipline -- with a countdown, a taper recommendation, and a show-week checklist for your next event.</p>
+          <div class="feature-copy">
+            <h3>Conditioning &amp; Competition Prep</h3>
+            <p>Foundation through taper, matched to your discipline -- with a countdown, a taper recommendation, and a show-week checklist for your next event.</p>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <section id="pricing">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <span class="kicker">Free &amp; Premium</span>
         <h2>Start free. Upgrade when you need more.</h2>
         <p>One horse, the calculators, and general guidance cost nothing. Premium unlocks the rest.</p>
       </div>
-      <div class="pricing-table">
+      <div class="pricing-table" data-reveal>
         <div class="pricing-head">
           <span>&nbsp;</span>
           <span>Free</span>
@@ -277,6 +365,26 @@
     <p class="footer-copy">&copy; 2026 Equus Metric. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+  // Scroll-reveal: resting state (no JS, or reduced-motion) already shows
+  // everything via the CSS media-query fallback -- this only adds the
+  // in-view transition on top for capable browsers.
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+</script>
 
 </body>
 </html>

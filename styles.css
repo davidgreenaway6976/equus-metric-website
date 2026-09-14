@@ -262,7 +262,14 @@ a { color: var(--brand); }
   height: 100%;
   min-height: 440px;
 }
-.hero-art svg { position: absolute; right: -6%; bottom: -6%; width: 128%; max-width: 640px; height: auto; }
+.hero-art img {
+  position: absolute;
+  right: 0;
+  bottom: -8%;
+  height: 122%;
+  width: auto;
+  max-width: none;
+}
 
 /* discipline marquee, bridges hero into the light content below */
 .marquee {
@@ -616,7 +623,7 @@ footer .wrap {
   .hero { padding-top: 56px; }
   .hero-copy { padding-bottom: 40px; text-align: left; }
   .hero-art { min-height: 320px; height: 320px; order: -1; margin-bottom: 8px; opacity: 0.85; }
-  .hero-art svg { right: -10%; bottom: -8%; width: 110%; }
+  .hero-art img { right: 0; bottom: -6%; height: 118%; }
   .persona-grid { grid-template-columns: 1fr; }
   .feature-grid { grid-template-columns: 1fr 1fr; }
   .feature-card { grid-column: span 2 !important; }

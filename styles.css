@@ -441,12 +441,19 @@ section { padding: 88px 0; }
 
 .feature-card h3 { font-size: 19px; }
 .feature-card p { margin-top: 10px; color: var(--ink-muted); font-size: 14.5px; line-height: 1.6; }
-.feature-card .feature-art { flex: none; width: 132px; height: 132px; }
+.feature-card .feature-art { flex: none; width: 168px; height: 168px; border-radius: var(--radius-md); overflow: hidden; }
 .feature-card.wide .feature-copy { flex: 1; }
+
+.feature-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .feature-card:not(.wide) .feature-art {
   width: 100%;
-  height: 96px;
+  height: 210px;
   margin-bottom: 18px;
 }
 
@@ -614,7 +621,7 @@ footer .wrap {
   .feature-grid { grid-template-columns: 1fr 1fr; }
   .feature-card { grid-column: span 2 !important; }
   .feature-card.wide { flex-direction: column; align-items: flex-start; }
-  .feature-card.wide .feature-art { width: 100%; height: 96px; margin-bottom: 18px; }
+  .feature-card.wide .feature-art { width: 100%; height: 210px; margin-bottom: 18px; }
   .pricing-head, .pricing-row { grid-template-columns: minmax(140px, 1fr) 96px 96px; column-gap: 12px; padding-left: 20px; padding-right: 20px; }
   .pricing-row { align-items: flex-start; }
   .pricing-row .cell { padding-top: 1px; }

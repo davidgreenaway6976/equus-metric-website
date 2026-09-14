@@ -275,7 +275,7 @@ a { color: var(--brand); }
 .marquee-track {
   display: flex;
   width: max-content;
-  gap: 48px;
+  gap: 24px;
   animation: marquee-scroll 32s linear infinite;
 }
 .marquee-track span {
@@ -285,7 +285,17 @@ a { color: var(--brand); }
   color: rgba(242, 236, 220, 0.55);
   white-space: nowrap;
 }
-.marquee-track span b { color: var(--accent-bright); font-style: normal; font-weight: 700; margin-right: 10px; }
+.marquee-track span::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-left: 24px;
+  border-radius: 50%;
+  background: var(--accent-bright);
+  opacity: 0.6;
+  vertical-align: middle;
+}
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -306,12 +316,12 @@ section { padding: 88px 0; }
 
 .section-head .kicker {
   display: block;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: "Spectral", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
   color: var(--accent);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .section-head h2 { font-size: clamp(28px, 3.6vw, 40px); }
@@ -354,13 +364,13 @@ section { padding: 88px 0; }
 .persona-card.competitive .persona-icon { background: rgba(217, 168, 104, 0.16); }
 
 .persona-card .persona-kicker {
-  font-size: 12.5px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
+  font-family: "Spectral", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--accent);
 }
-.persona-card.competitive .persona-kicker { color: rgba(242, 236, 220, 0.5); }
+.persona-card.competitive .persona-kicker { color: var(--accent-bright); }
 
 .persona-card h3 {
   font-size: 23px;

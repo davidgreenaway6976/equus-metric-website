@@ -264,8 +264,9 @@ a { color: var(--brand); }
 }
 .hero-art img {
   position: absolute;
-  right: 0;
+  left: 50%;
   bottom: -8%;
+  transform: translateX(-50%);
   height: 122%;
   width: auto;
   max-width: none;
@@ -623,7 +624,7 @@ footer .wrap {
   .hero { padding-top: 56px; }
   .hero-copy { padding-bottom: 40px; text-align: left; }
   .hero-art { min-height: 320px; height: 320px; order: -1; margin-bottom: 8px; opacity: 0.85; }
-  .hero-art img { right: 0; bottom: -6%; height: 118%; }
+  .hero-art img { left: 50%; bottom: -6%; height: 118%; }
   .persona-grid { grid-template-columns: 1fr; }
   .feature-grid { grid-template-columns: 1fr 1fr; }
   .feature-card { grid-column: span 2 !important; }

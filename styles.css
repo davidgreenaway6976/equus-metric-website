@@ -601,10 +601,13 @@ footer .wrap {
 .legal-page { padding: 56px 0 80px; }
 .legal-page .wrap { max-width: 720px; }
 .legal-page h1 { font-size: 30px; margin-bottom: 8px; }
-.legal-updated { color: var(--ink-muted); font-size: 13px; margin-bottom: 40px; }
+.legal-updated { color: var(--ink-muted); font-size: 13px; margin-bottom: 16px; }
+.legal-intro { color: var(--ink); font-size: 15px; line-height: 1.65; margin-bottom: 40px; }
 .legal-section { margin-bottom: 28px; }
 .legal-section h2 { font-family: "Spectral", serif; font-size: 17px; margin-bottom: 8px; }
 .legal-section p { color: var(--ink-muted); font-size: 15px; line-height: 1.65; }
+.legal-section ul { margin: 0; padding-left: 20px; }
+.legal-section li { color: var(--ink-muted); font-size: 15px; line-height: 1.65; margin-bottom: 4px; }
 .legal-back {
   display: inline-flex;
   align-items: center;

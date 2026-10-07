@@ -341,93 +341,6 @@ section { padding: 88px 0; }
   line-height: 1.6;
 }
 
-/* persona split */
-
-.persona-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-.persona-card {
-  background: var(--surface);
-  padding: 40px 36px;
-  position: relative;
-}
-.persona-card.competitive { background: var(--brand-darker); color: var(--cream); }
-
-.persona-card .persona-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-md);
-  background: var(--brand-tint);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 22px;
-}
-.persona-card.competitive .persona-icon { background: rgba(217, 168, 104, 0.16); }
-
-.persona-card .persona-kicker {
-  font-family: "Spectral", Georgia, serif;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 15px;
-  color: var(--accent);
-}
-.persona-card.competitive .persona-kicker { color: var(--accent-bright); }
-
-.persona-card h3 {
-  font-size: 23px;
-  margin-top: 10px;
-  color: var(--ink);
-}
-.persona-card.competitive h3 { color: var(--cream); }
-
-.persona-card .persona-sub {
-  margin-top: 10px;
-  color: var(--ink-muted);
-  font-size: 15px;
-}
-.persona-card.competitive .persona-sub { color: rgba(242, 236, 220, 0.6); }
-
-.persona-list {
-  margin-top: 26px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.persona-list-item {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-
-.persona-list-item .dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  margin-top: 8px;
-  flex: none;
-}
-.persona-card.competitive .persona-list-item .dot { background: var(--accent-bright); }
-
-.persona-list-item strong { font-size: 15px; color: var(--ink); }
-.persona-card.competitive .persona-list-item strong { color: var(--cream); }
-.persona-list-item span {
-  display: block;
-  color: var(--ink-muted);
-  font-size: 13.5px;
-  margin-top: 3px;
-  line-height: 1.5;
-}
-.persona-card.competitive .persona-list-item span { color: rgba(242, 236, 220, 0.55); }
-
 /* bento feature grid */
 
 .feature-grid {
@@ -626,7 +539,6 @@ footer .wrap {
   .hero-copy { padding-bottom: 40px; text-align: left; }
   .hero-art { min-height: 320px; height: 320px; order: -1; margin-bottom: 8px; opacity: 0.85; }
   .hero-art img { left: 50%; bottom: -6%; height: 118%; }
-  .persona-grid { grid-template-columns: 1fr; }
   .feature-grid { grid-template-columns: 1fr 1fr; }
   .feature-card { grid-column: span 2 !important; }
   .feature-card.wide { flex-direction: column; align-items: flex-start; }

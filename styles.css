@@ -771,3 +771,113 @@ footer .wrap {
   .calc-steps li { padding: 20px 18px 20px 62px; }
   .calc-steps li::before { left: 16px; top: 20px; }
 }
+
+/* ---------- guide articles ---------- */
+
+.article { padding: 48px 0 72px; }
+.article .wrap { max-width: 740px; }
+.article h1 { font-size: clamp(32px, 4.6vw, 46px); line-height: 1.1; letter-spacing: -0.02em; }
+.article-meta { margin-top: 14px; font-size: 13.5px; color: var(--ink-muted); }
+.article .lede { margin-top: 20px; font-size: 19px; line-height: 1.65; color: var(--ink); }
+.article h2 { font-size: 26px; line-height: 1.2; margin: 44px 0 14px; }
+.article h3 { font-size: 19px; margin: 26px 0 8px; }
+.article p { margin: 0 0 16px; font-size: 16.5px; line-height: 1.75; color: #2b352f; }
+.article ul, .article ol { margin: 0 0 18px; padding-left: 22px; }
+.article li { margin-bottom: 8px; font-size: 16.5px; line-height: 1.7; color: #2b352f; }
+.article a { color: var(--brand); font-weight: 600; }
+.article strong { color: var(--ink); }
+
+.article-keys {
+  margin: 28px 0 8px;
+  background: var(--brand-tint);
+  border-radius: var(--radius-lg);
+  padding: 22px 26px;
+}
+.article-keys h2 { font-size: 17px; margin: 0 0 10px; font-family: "Manrope", system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.07em; color: var(--brand); }
+.article-keys ul { margin: 0; }
+.article-keys li { margin-bottom: 6px; font-size: 15.5px; }
+
+.article-formula {
+  margin: 20px 0;
+  padding: 18px 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.article-formula strong { display: block; font-family: "Spectral", Georgia, serif; font-size: 19px; margin-bottom: 4px; }
+
+.article-table-wrap { overflow-x: auto; margin: 20px 0 24px; }
+.article-table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; font-size: 15px; }
+.article-table th, .article-table td { text-align: left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--line); line-height: 1.55; }
+.article-table th { font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); background: var(--surface-alt); white-space: nowrap; }
+.article-table tr:last-child td { border-bottom: 0; }
+.article-table td:first-child { font-weight: 700; white-space: nowrap; }
+
+.article-note { margin: 22px 0; padding: 16px 20px; background: var(--badge-amber-bg); border-radius: var(--radius-md); font-size: 15px; line-height: 1.65; color: #5b3d17; }
+
+.article-cta {
+  margin: 44px 0 8px;
+  padding: 30px;
+  border-radius: var(--radius-xl);
+  background: radial-gradient(120% 140% at 80% 0%, #23372a 0%, var(--brand-darker) 55%, #0f1712 100%);
+  color: var(--cream);
+}
+.article .article-cta h2 { margin: 0 0 10px; font-size: 24px; color: var(--cream); }
+.article .article-cta p { color: rgba(242, 236, 220, 0.78); font-size: 16px; }
+.article .article-cta .btn-primary { color: #24190C; font-weight: 800; }
+.article-cta .hero-ctas { margin-top: 22px; }
+
+.article-related { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
+.article-related h2 { margin: 0 0 12px; font-size: 20px; }
+.article-related ul { list-style: none; padding: 0; margin: 0; }
+.article-related li { margin-bottom: 10px; }
+
+.calc-related { padding: 56px 0 64px; }
+.calc-related .calc-narrow { max-width: 760px; }
+.calc-related ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.calc-related li a {
+  display: block;
+  padding: 20px 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.calc-related li a:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.calc-related li strong { display: block; font-family: "Spectral", Georgia, serif; font-size: 19px; }
+.calc-related li span { display: block; margin-top: 4px; font-size: 14.5px; color: var(--ink-muted); line-height: 1.55; }
+
+/* the wide six-area table turns into one readable card per area on phones */
+@media (max-width: 640px) {
+  .article-table.stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+  .article-table.stack,
+  .article-table.stack tbody,
+  .article-table.stack tr,
+  .article-table.stack td { display: block; }
+  .article-table.stack tr { padding: 6px 0 10px; border-bottom: 1px solid var(--line); }
+  .article-table.stack tr:last-child { border-bottom: 0; }
+  .article-table.stack td { border: 0; padding: 6px 18px; white-space: normal; }
+  .article-table.stack td:first-child { padding-top: 14px; font-family: "Spectral", Georgia, serif; font-size: 19px; }
+  .article-table.stack td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 2px;
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+}
+
+@media (max-width: 480px) {
+  .article { padding-top: 32px; }
+  .article .lede { font-size: 17.5px; }
+  .article h2 { font-size: 23px; }
+  .article-cta { padding: 24px 20px; }
+}

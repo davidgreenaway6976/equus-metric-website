@@ -10,6 +10,8 @@ repo's `src/theme/tokens.ts`).
 - `privacy.html` / `terms.html` -- mirror the in-app legal pages word for word
 - `horse-weight-calculator.html` / `calculator.js` -- the free weight calculator
   (same maths as `src/lib/measurement.ts` in the app; runs in the browser, stores nothing)
+- `how-to-measure-horse-weight-at-home.html` / `is-my-horse-overweight.html` --
+  guide articles that link to the calculator (body condition wording matches the app)
 - `sitemap.xml` / `robots.txt` -- for search engines
 - `styles.css` -- shared design tokens and layout
 - `assets/icon.png` -- the app icon

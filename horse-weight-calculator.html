@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horse Weight Calculator: kg, lb and stone | Equus Metric</title>
+<meta name="description" content="Free horse weight calculator. Enter heart girth and body length in cm or inches to estimate your horse's weight in kg, lb and stone. Nothing is stored.">
+<link rel="canonical" href="https://equusmetric.com/horse-weight-calculator.html">
+<link rel="icon" href="assets/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Horse Weight Calculator: kg, lb and stone">
+<meta property="og:description" content="Estimate your horse's weight from a tape measure. Heart girth and body length in, kg, lb and stone out. Free, and nothing is stored.">
+<meta property="og:url" content="https://equusmetric.com/horse-weight-calculator.html">
+<meta property="og:image" content="https://equusmetric.com/assets/hero-phones.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Horse Weight Calculator",
+  "url": "https://equusmetric.com/horse-weight-calculator.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "description": "Estimates a horse's weight in kilograms, pounds and stone from heart girth and body length.",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+  "publisher": { "@type": "Organization", "name": "Equus Metric", "url": "https://equusmetric.com" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is a horse weight calculator?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Estimates from heart girth and body length are typically within about 6% of the true weight for most horses. That makes them good for spotting change over time. A livestock scale or weighbridge is more accurate when you need a precise figure, and you should never use an estimate alone to work out medication doses. Ask your vet." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure heart girth and body length?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Stand your horse square on level ground with the head up. For heart girth, pass a soft tape around the barrel just behind the elbows and over the highest point behind the withers, snug but not tight, and read it at the end of a breath out. For body length, measure in a straight line from the point of the shoulder to the point of the buttock." }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I weigh my horse?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Many owners check every two to four weeks, and more often while managing weight. Measure at the same time of day, with the same tape and the same method, so the changes you see are real." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should my horse weigh?",
+      "acceptedAnswer": { "@type": "Answer", "text": "There is no single right weight. It depends on height, build and breed, so judge weight together with body condition score and your vet's advice rather than aiming for a number." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between weight and body condition score?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Weight tells you how heavy your horse is. Body condition score tells you how much fat they are carrying, using a 1 to 9 scale assessed across six areas of the body. Two horses can weigh the same and be in very different condition, so it helps to track both." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the calculator warn about my measurements?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The formula is built on heart girths between about 100 and 200 cm (39 to 79 inches). Outside that range the estimate is still shown, but it is rougher, so use a livestock scale if you can." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the information I enter saved?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Everything is calculated in your browser. Nothing you type is sent anywhere or stored." }
+    }
+  ]
+}
+</script>
+</head>
+<body class="calc-page">
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand-lockup">
+      <img src="assets/icon.png" alt="">
+      <span>Equus Metric</span>
+    </a>
+    <nav class="header-nav">
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="mailto:support@equusmetric.com?subject=Notify%20me%20when%20Equus%20Metric%20launches" class="cta">Get notified</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="calc-hero">
+    <div class="wrap">
+      <div class="eyebrow-chip eyebrow-light">Free tool. Nothing you type is stored.</div>
+      <h1>Horse weight <em>calculator</em></h1>
+      <p class="lede">
+        Measure your horse's heart girth and body length with a soft tape, and get an
+        estimated weight in kilograms, pounds and stone. Works in centimetres or inches.
+      </p>
+    </div>
+  </section>
+
+  <section class="calc-tool" aria-labelledby="calc-heading">
+    <div class="wrap">
+      <h2 id="calc-heading" class="visually-hidden">Calculate your horse's weight</h2>
+
+      <div class="calc-grid">
+        <form id="calc-form" class="calc-card" autocomplete="off" novalidate>
+          <div class="calc-row-head">
+            <span class="calc-card-title">Your measurements</span>
+            <span id="calc-example" class="calc-chip">Example values. Replace with your horse's.</span>
+          </div>
+
+          <fieldset class="calc-units">
+            <legend class="visually-hidden">Units</legend>
+            <label class="calc-unit"><input type="radio" name="unit" value="cm" checked><span>Centimetres</span></label>
+            <label class="calc-unit"><input type="radio" name="unit" value="in"><span>Inches</span></label>
+          </fieldset>
+
+          <div class="calc-field">
+            <label for="calc-girth">Heart girth</label>
+            <div class="calc-input">
+              <input id="calc-girth" type="number" inputmode="decimal" step="0.1" min="0" value="185">
+              <span data-unit-label>cm</span>
+            </div>
+            <p class="calc-help">Around the barrel, just behind the elbows and over the withers.</p>
+          </div>
+
+          <div class="calc-field">
+            <label for="calc-length">Body length</label>
+            <div class="calc-input">
+              <input id="calc-length" type="number" inputmode="decimal" step="0.1" min="0" value="160">
+              <span data-unit-label>cm</span>
+            </div>
+            <p class="calc-help">Point of the shoulder to the point of the buttock, in a straight line.</p>
+          </div>
+
+          <div class="calc-field">
+            <label for="calc-type">Body type</label>
+            <select id="calc-type">
+              <option value="standard" selected>Standard</option>
+              <option value="pony">Pony</option>
+              <option value="draft">Draft / Cob</option>
+              <option value="narrow">Narrow-bodied</option>
+            </select>
+            <p class="calc-help" id="calc-type-hint">Most riding horses.</p>
+          </div>
+        </form>
+
+        <div id="calc-result" class="calc-result" role="region" aria-live="polite" aria-label="Estimated weight">
+          <span class="calc-result-label">Estimated weight</span>
+          <div class="calc-kg"><span id="calc-kg">460</span><span class="calc-kg-unit">kg</span></div>
+          <div class="calc-alt">
+            <span id="calc-lb">1,014 lb</span>
+            <span class="calc-dot" aria-hidden="true"></span>
+            <span id="calc-stone">72 st 6 lb</span>
+          </div>
+          <p id="calc-range" class="calc-range">Likely range 432 to 488 kg (about plus or minus 6%).</p>
+          <p id="calc-error" class="calc-error" hidden></p>
+          <p id="calc-note" class="calc-note" hidden>
+            This measurement is outside the typical range the formula was built on. Treat the
+            estimate as rough, and use a livestock scale if one is available.
+          </p>
+          <p id="calc-forage" class="calc-forage">As a general guide, most horses eat about 7 to 9 kg of forage a day (1.5 to 2% of bodyweight).</p>
+        </div>
+      </div>
+
+      <noscript>
+        <p class="calc-noscript">
+          This calculator needs JavaScript. The formula is: weight in kg equals heart girth
+          in cm, squared, multiplied by body length in cm, divided by 11,900.
+        </p>
+      </noscript>
+
+      <p class="calc-disclaimer">
+        General guidance, not veterinary advice. An estimate from a tape is not a substitute
+        for a livestock scale, and should never be used on its own to work out medication doses.
+      </p>
+    </div>
+  </section>
+
+  <section class="calc-measure">
+    <div class="wrap calc-narrow">
+      <div class="section-head" data-reveal>
+        <span class="kicker">Get a good reading</span>
+        <h2>How to measure your horse</h2>
+      </div>
+      <ol class="calc-steps">
+        <li>
+          <h3>Stand square on level ground</h3>
+          <p>Hold the head up and level, with all four feet under the horse. A horse leaning
+          or standing on a slope will throw the numbers off.</p>
+        </li>
+        <li>
+          <h3>Measure the heart girth</h3>
+          <p>Pass a soft tape around the barrel, just behind the elbows and over the highest
+          point behind the withers. Keep it flat and level on both sides, pull it snug without
+          squeezing, and read it at the end of a breath out.</p>
+        </li>
+        <li>
+          <h3>Measure the body length</h3>
+          <p>In a straight line from the point of the shoulder (the front of the shoulder joint)
+          to the point of the buttock (the bony point at the back of the hindquarters).</p>
+        </li>
+        <li>
+          <h3>Repeat it the same way each time</h3>
+          <p>Use the same tape, the same time of day and the same method. A consistent reading
+          tells you far more about change than any single number.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="calc-formula">
+    <div class="wrap calc-narrow">
+      <div class="section-head" data-reveal>
+        <span class="kicker">The maths</span>
+        <h2>How the estimate works</h2>
+        <p>
+          Weight in kilograms equals heart girth in centimetres, squared, multiplied by body
+          length in centimetres, then divided by a number that depends on body type. The
+          standard divisor of 11,900 comes from published work by Carroll and Huntington (1988).
+        </p>
+      </div>
+      <div class="calc-table-wrap">
+        <table class="calc-table">
+          <thead><tr><th scope="col">Body type</th><th scope="col">Divisor</th></tr></thead>
+          <tbody>
+            <tr><td>Standard</td><td>11,900</td></tr>
+            <tr><td>Pony</td><td>11,000</td></tr>
+            <tr><td>Draft / Cob</td><td>12,600</td></tr>
+            <tr><td>Narrow-bodied</td><td>12,200</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="calc-fine">
+        Only the standard divisor comes from the published formula. The other body types are
+        approximate adjustments, so treat them as a guide. Typical accuracy is about plus or
+        minus 6%.
+      </p>
+    </div>
+  </section>
+
+  <section class="calc-faq">
+    <div class="wrap calc-narrow">
+      <div class="section-head" data-reveal>
+        <span class="kicker">Good to know</span>
+        <h2>Questions owners ask</h2>
+      </div>
+      <div class="calc-faq-list">
+        <details>
+          <summary>How accurate is a horse weight calculator?</summary>
+          <p>Estimates from heart girth and body length are typically within about 6% of the true
+          weight for most horses. That makes them good for spotting change over time. A livestock
+          scale or weighbridge is more accurate when you need a precise figure, and you should
+          never use an estimate alone to work out medication doses. Ask your vet.</p>
+        </details>
+        <details>
+          <summary>How do I measure heart girth and body length?</summary>
+          <p>Stand your horse square on level ground with the head up. For heart girth, pass a soft
+          tape around the barrel just behind the elbows and over the highest point behind the
+          withers, snug but not tight, and read it at the end of a breath out. For body length,
+          measure in a straight line from the point of the shoulder to the point of the buttock.</p>
+        </details>
+        <details>
+          <summary>How often should I weigh my horse?</summary>
+          <p>Many owners check every two to four weeks, and more often while managing weight.
+          Measure at the same time of day, with the same tape and the same method, so the changes
+          you see are real.</p>
+        </details>
+        <details>
+          <summary>How much should my horse weigh?</summary>
+          <p>There is no single right weight. It depends on height, build and breed, so judge weight
+          together with body condition score and your vet's advice rather than aiming for a number.</p>
+        </details>
+        <details>
+          <summary>What is the difference between weight and body condition score?</summary>
+          <p>Weight tells you how heavy your horse is. Body condition score tells you how much fat
+          they are carrying, using a 1 to 9 scale assessed across six areas of the body. Two horses
+          can weigh the same and be in very different condition, so it helps to track both.</p>
+        </details>
+        <details>
+          <summary>Why does the calculator warn about my measurements?</summary>
+          <p>The formula is built on heart girths between about 100 and 200 cm (39 to 79 inches).
+          Outside that range the estimate is still shown, but it is rougher, so use a livestock
+          scale if you can.</p>
+        </details>
+        <details>
+          <summary>Is the information I enter saved?</summary>
+          <p>No. Everything is calculated in your browser. Nothing you type is sent anywhere or stored.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="wrap">
+      <h2>Track it over time, and feed to it.</h2>
+      <p>
+        Equus Metric saves every measurement, scores body condition region by region, and builds
+        a daily ration around your horse. Try it free for 14 days, then &pound;9.99 a month.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="mailto:support@equusmetric.com?subject=Notify%20me%20when%20Equus%20Metric%20launches">
+          Get notified at launch
+        </a>
+        <a class="btn-ghost-link" href="/#features">See what's inside</a>
+      </div>
+      <p class="hero-note">Coming soon to the App Store.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:support@equusmetric.com">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Equus Metric. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="calculator.js"></script>
+<script>
+  // Scroll-reveal, as on the home page: content is visible without JS and
+  // under reduced motion; this only adds the in-view transition.
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+</script>
+
+</body>
+</html>

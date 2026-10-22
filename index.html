@@ -23,7 +23,7 @@
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
       <a href="horse-weight-calculator.html">Weight calculator</a>
-      <a href="mailto:support@equusmetric.com" class="cta">Get notified</a>
+      <a href="#get-notified" class="cta">Get notified</a>
     </nav>
   </div>
 </header>
@@ -43,9 +43,7 @@
           template every horse gets.
         </p>
         <div class="hero-ctas">
-          <a class="btn-primary" href="mailto:support@equusmetric.com?subject=Notify%20me%20when%20Equus%20Metric%20launches">
-            Get notified at launch
-          </a>
+          <a class="btn-primary" href="#get-notified">Get notified at launch</a>
           <a class="btn-ghost-link" href="#features">See how it works</a>
         </div>
         <p class="hero-note">Coming soon to the App Store and Google Play.</p>
@@ -176,12 +174,22 @@
   <section class="final-cta">
     <div class="wrap">
       <h2>Get notified the day Equus Metric launches.</h2>
-      <p>No account needed yet -- just drop us a line and we'll let you know.</p>
-      <div class="hero-ctas">
-        <a class="btn-primary" href="mailto:support@equusmetric.com?subject=Notify%20me%20when%20Equus%20Metric%20launches">
-          support@equusmetric.com
-        </a>
-      </div>
+      <p>No account needed. Leave your email and we will write to you once, on launch day.</p>
+      <form class="signup" id="get-notified" name="launch-list" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="launch-list">
+        <input type="hidden" name="source" value="home">
+        <p class="signup-trap" aria-hidden="true"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="signup-row">
+          <label class="visually-hidden" for="signup-email">Email address</label>
+          <input id="signup-email" type="email" name="email" placeholder="Your email address" autocomplete="email" inputmode="email" required>
+          <button type="submit" class="btn-primary">Get notified</button>
+        </div>
+        <label class="signup-consent">
+          <input type="checkbox" name="consent" value="yes" required>
+          <span>Email me once, when Equus Metric launches. <a href="launch-list-notice.html">How we use your email</a></span>
+        </label>
+        <p class="signup-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 </main>
@@ -191,6 +199,7 @@
     <div class="footer-links">
       <a href="horse-weight-calculator.html">Horse weight calculator</a>
       <a href="privacy.html">Privacy Policy</a>
+      <a href="launch-list-notice.html">Launch list notice</a>
       <a href="terms.html">Terms of Service</a>
       <a href="mailto:support@equusmetric.com">Contact</a>
     </div>
@@ -198,6 +207,7 @@
   </div>
 </footer>
 
+<script src="signup.js"></script>
 <script>
   // Scroll-reveal: resting state (no JS, or reduced-motion) already shows
   // everything via the CSS media-query fallback -- this only adds the

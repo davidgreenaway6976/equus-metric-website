@@ -42,7 +42,7 @@
     <nav class="header-nav">
       <a href="/#features">Features</a>
       <a href="horse-weight-calculator.html">Weight calculator</a>
-      <a href="mailto:support@equusmetric.com?subject=Notify%20me%20when%20Equus%20Metric%20launches" class="cta">Get notified</a>
+      <a href="#get-notified" class="cta">Get notified</a>
     </nav>
   </div>
 </header>
@@ -166,8 +166,22 @@
           to the weight, and builds a daily ration that accounts for grazing. Try it free for 14 days,
           then &pound;9.99 a month.
         </p>
+        <form class="signup" id="get-notified" name="launch-list" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="launch-list">
+        <input type="hidden" name="source" value="guide-condition">
+        <p class="signup-trap" aria-hidden="true"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="signup-row">
+          <label class="visually-hidden" for="signup-email">Email address</label>
+          <input id="signup-email" type="email" name="email" placeholder="Your email address" autocomplete="email" inputmode="email" required>
+          <button type="submit" class="btn-primary">Get notified</button>
+        </div>
+        <label class="signup-consent">
+          <input type="checkbox" name="consent" value="yes" required>
+          <span>Email me once, when Equus Metric launches. <a href="launch-list-notice.html">How we use your email</a></span>
+        </label>
+        <p class="signup-status" role="status" aria-live="polite"></p>
+      </form>
         <div class="hero-ctas">
-          <a class="btn-primary" href="mailto:support@equusmetric.com?subject=Notify%20me%20when%20Equus%20Metric%20launches">Get notified at launch</a>
           <a class="btn-ghost-link" href="horse-weight-calculator.html">Try the free calculator</a>
         </div>
       </div>
@@ -194,12 +208,15 @@
       <a href="/">Home</a>
       <a href="horse-weight-calculator.html">Horse weight calculator</a>
       <a href="privacy.html">Privacy Policy</a>
+      <a href="launch-list-notice.html">Launch list notice</a>
       <a href="terms.html">Terms of Service</a>
       <a href="mailto:support@equusmetric.com">Contact</a>
     </div>
     <p class="footer-copy">&copy; 2026 Equus Metric. All rights reserved.</p>
   </div>
 </footer>
+
+<script src="signup.js"></script>
 
 </body>
 </html>
